@@ -116,7 +116,7 @@ _-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*/
   position: relative;
   width: $q-c-flex-base;
 //  display: inline-block;
-  flex: 0 0 auto;
+  flex: 1 0 auto;
   margin-bottom: .25rem; margin-left: .25rem;
   padding: $q-c-pad;
   background: #e9e9ff;
@@ -162,7 +162,7 @@ _-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*/
 
 .button-container {
   flex: 1 0 auto;
-  max-width: $b-c-max-w;
+  //max-width: $b-c-max-w;
   box-sizing: border-box;
   display: flex;
   flex-flow: row;
