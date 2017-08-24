@@ -5,8 +5,8 @@ a bunch of variables for layout
 $q-c-pad-t-b: 1.25rem;
 $q-c-pad-l-r: 1.5rem;
 $q-c-pad: $q-c-pad-t-b $q-c-pad-l-r;
-$q-c-flex-base: 17rem;
-$q-c-h: 7rem;
+$q-c-flex-base: 20rem;
+$q-c-h: 10rem;
 $q-c-bord-rad: .5rem .5rem 0 .5rem;
 
 $b-c-pad-t-b: 2.5rem;
@@ -41,23 +41,20 @@ $wo-color2: lighten(yellow,45%);
 $wo-border: .15rem solid $wo-color2;
 $wo-shadow: 0 0 .5rem .5rem $wo-color2;
 
+html {
+  height: 100%;
+}
+
 body {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
   font-family: sans-serif;
   color: $main-color;
-  height: 100%;
   background: $bg-color3;
 }
 
-/*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*
+/*-_-*-_-*-_-*-_-
  This container exists only for the purpose of stretching a color gradient background to the full size of the viewport regardless of page content
-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*/
+_-*-_-*-_-*-_-*-_-*/
 .bg-container {
-
   position: absolute;
   top: 0;
   left: 0;
@@ -70,60 +67,50 @@ _-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*/
 }
 
 /*@media handheld and (max-width:480px), handheld and (orientation: landscape){
-  .flex-mama{
+  .fake-border-box{
     flex: 0 0 auto;
     width: 100%;
   }
 }
 
 @media screen and (min-width:481px){
-  .flex-mama{
+  .fake-border-box{
     flex: 0 0 auto;
     width: fit-content;
   }
 }*/
 
-.flex-mama {
-
-  flex: 0 0 auto;
-//  display: flex;
-//  flex-flow: column;
-//  justify-content: space-around;
+.fake-border-box {
   border-radius: 0 1rem 0 1rem;
   background: $mc-bord;
   padding: 1rem;
-//  height: max-content;
-  width: fit-content;
-  margin-left: auto; margin-right: auto;
   box-shadow: 0 .1rem .5rem $main-color;
-
+  width: fit-content;
+  margin: auto;
 }
 
 .main-container {
-
-  width: fit-content;
-//  flex: 0 1 auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
   padding: .25rem .25rem 0 0;
   border-radius: 0 .5rem 0 .5rem;
   background: linear-gradient(#fc109c, #483d8b);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .quote-container {
-
   position: relative;
-  width: $q-c-flex-base;
-//  display: inline-block;
-  flex: 1 0 auto;
+//  width: $q-c-flex-base;
   margin-bottom: .25rem; margin-left: .25rem;
   padding: $q-c-pad;
   background: #e9e9ff;
   border-radius: $q-c-bord-rad;
   height: $q-c-h;
   z-index: 1;
-
+  flex: 0 0 auto;
+  width: 20rem;
+  box-sizing: border-box;
 //  transition: background 1s ease-in;
 
   q{
@@ -161,22 +148,19 @@ _-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*-_-*/
 }
 
 .button-container {
-  flex: 1 0 auto;
-  //max-width: $b-c-max-w;
+  text-align: center;
   box-sizing: border-box;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
 //  margin: $b-c-marg-t-b $b-c-marg-r $b-c-marg-t-b $b-c-marg-l;
   margin-bottom: .25rem; margin-left: .25rem;
   padding: 2.5rem;
   background: #e9e9ff;
   border-radius: 0 .5rem .5rem .5rem;
   z-index: 1;
+  flex: 1 0 auto;
+  max-width: 20rem;
 
   button{
-    flex: none;
+//    flex: none;
     padding: 1rem .5rem;
     box-shadow: none;
     border: none;
