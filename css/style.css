@@ -19,7 +19,8 @@ and variables for colors
 
 @media screen and (min-width: 500px) {
   .quote-container {
-    width: 20rem; }
+    width: 20rem;
+    padding: 1rem; }
   .button-container {
     width: auto; } }
 
@@ -69,13 +70,11 @@ _-*-_-*-_-*-_-*-_-*/
 
 .quote-container {
   position: relative;
-  padding: 1.25rem 1.5rem;
   background: #e9e9ff;
   border-radius: 0.5rem 0.5rem 0 0.5rem;
   min-height: 10rem;
   z-index: 1;
-  flex: 0 0 auto;
-  width: 20rem;
+  flex: 0 1 auto;
   box-sizing: border-box;
   overflow: hidden; }
   .quote-container q::before {
@@ -100,7 +99,7 @@ _-*-_-*-_-*-_-*-_-*/
   background: #e9e9ff;
   border-radius: 0 .5rem .5rem .5rem;
   z-index: 1;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
